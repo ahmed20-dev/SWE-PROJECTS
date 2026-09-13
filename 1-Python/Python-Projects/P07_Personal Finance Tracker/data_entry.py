@@ -38,7 +38,7 @@ def get_category():
     
 
 # get Description
-def get_description():
+def get_descriptipn():
     return input("Enter description (Optional): ")
      
 
