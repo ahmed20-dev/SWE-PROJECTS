@@ -126,27 +126,60 @@ Goal: Solve ~150–250 problems.
 
 ## Phase 3: Databases (2–4 weeks)
 
-### 1. SQL
-
-Master: SELECT, JOIN, GROUP BY, HAVING, CTEs, Window Functions, Transactions, Indexes
-
-### 2. PostgreSQL
-
-Learn: Schema design, Constraints, Relationships, Normalization, Query optimization, Backup/restore
-
-###  3. NoSQL & Specialized Stores
-
-- Redis (caching, rate limiting, session store, pub/sub)
-- MongoDB or similar (document store) — at least conceptually, many AI apps use it for unstructured data
-- **Vector databases** (pgvector, Pinecone, Qdrant, or Weaviate) — this is the database layer your AI stack actually runs on (RAG, semantic search)
-
-**🛠 Projects:**
-
-- Design and normalize a schema for a real domain (e.g. library system, e-commerce store) then populate it and write increasingly complex queries (JOINs → window functions → CTEs)
-- Add Redis caching in front of a slow query and measure the speedup
-- Store a handful of text documents as embeddings in pgvector and run a similarity search query
+## Table of Contents
+- [Phase 1: SQL Fundamentals](#phase-1-sql-fundamentals)
+- [Phase 2: PostgreSQL Specifics](#phase-2-postgresql-specifics)
+- [Phase 3: NoSQL & Specialized Stores](#phase-3-nosql--specialized-stores)
 
 ---
+
+## Phase 1: SQL Fundamentals
+
+**Master:**
+- [ ] SELECT, JOIN (inner, left, right, full, self-join), GROUP BY, HAVING
+- [ ] Subqueries (correlated and uncorrelated)
+- [ ] CTEs (`WITH` clauses), including recursive CTEs
+- [ ] Window functions (`ROW_NUMBER`, `RANK`, `LAG`/`LEAD`, running totals, partitions)
+- [ ] Transactions (`BEGIN`/`COMMIT`/`ROLLBACK`) and isolation levels — read committed, repeatable read, serializable. Understand what a race condition or phantom read actually looks like, not just the definitions.
+- [ ] Indexes — what they are, B-tree vs other types, when they help vs hurt
+
+**Add explicitly (often skipped):**
+- [ ] `EXPLAIN` / `EXPLAIN ANALYZE` — read a query plan, spot a sequential scan where an index scan should be happening, understand cost estimates. This is the single most transferable skill in this entire roadmap.
+
+---
+
+## Phase 2: PostgreSQL Specifics
+
+**Learn:**
+- [ ] Schema design principles
+- [ ] Constraints (`PRIMARY KEY`, `FOREIGN KEY`, `UNIQUE`, `CHECK`, `NOT NULL`)
+- [ ] Relationships (1:1, 1:many, many:many, junction tables)
+- [ ] Normalization (1NF → 3NF, and knowing when to deliberately denormalize)
+- [ ] Query optimization in practice (using `EXPLAIN ANALYZE` from Phase 1 against real queries)
+- [ ] Backup/restore (`pg_dump`, `pg_restore`, point-in-time recovery basics)
+
+**Add explicitly (often skipped):**
+- [ ] Connection pooling (PgBouncer or equivalent) — every real app hits this wall eventually, especially serverless or AI apps that open lots of short-lived connections. Understand transaction vs session pooling modes.
+- [ ] Migrations (Alembic, Flyway, or hand-rolled versioned SQL files) — schema design is only half the story; you need a repeatable, safe way to evolve a schema that already has data and traffic on it.
+
+---
+
+## Phase 3: NoSQL & Specialized Stores
+
+- [ ] **Redis** — caching, rate limiting, session storage, pub/sub. Understand cache invalidation strategies (TTL, write-through, write-behind), not just "cache it."
+- [ ] **MongoDB or similar (document store)** — at least conceptually. Understand where a document model fits better than relational (nested/variable-shape data) and where it doesn't (highly relational data with lots of joins).
+- [ ] **Vector databases** (pgvector, Pinecone, Qdrant, or Weaviate) — the layer your AI stack actually runs on for RAG and semantic search.
+  - [ ] HNSW vs IVFFlat index tradeoffs (build time, query speed, recall)
+  - [ ] Distance metrics (cosine vs L2 vs inner product) — picking the wrong one silently degrades search quality without throwing any errors
+
+---
+
+## 🛠 Projects
+
+- [ ] **Schema design & queries** — Design and normalize a schema for a real domain (library system, e-commerce store, etc.), populate it, then write increasingly complex queries: JOINs → window functions → CTEs. *Extension:* once populated, force a migration (add a relationship, split a table) as if it were live in production.
+- [ ] **Redis caching** — Add Redis caching in front of a slow query and measure the speedup with `EXPLAIN ANALYZE` before/after. Include a cache invalidation strategy, not just the cache itself.
+- [ ] **pgvector similarity search** — Store a handful of text documents as embeddings in pgvector and run a similarity search query. *Extension:* try a bad chunking/embedding strategy and observe how search quality degrades.
+
 
 ## Phase 4: Backend Development (6–8 weeks)
 
