@@ -183,45 +183,91 @@ Goal: Solve ~150–250 problems.
 
 ## Phase 4: Backend Development (6–8 weeks)
 
-### 1. REST APIs
-
-Learn: HTTP, JSON, CRUD, REST principles, Status codes, Pagination, Validation
-
-- GraphQL basics (just enough to know when it's the right tool)
-- Idempotency & rate limiting
-
-### 2. FastAPI
-
-Learn: Routing, Models, Validation, Dependency Injection, Background Tasks, Middleware, Async programming
-
-- WebSockets — needed for streaming LLM responses to a frontend
-- Server-Sent Events (SSE) — the more common pattern for token streaming
-
-### 3. Authentication
-
-Learn: Sessions, Cookies, JWT, OAuth, Password hashing, Authorization, RBAC
-
-- API key management — how you'll gate access to your own AI endpoints
-
-### 4. Testing (deeper than Phase 1 basics)
-
-- Unit tests (pytest), Integration tests, Mocking external APIs, Test coverage tools
-
-### 5. Security Fundamentals
-
-- OWASP Top 10 basics, SQL injection, XSS, CSRF
-- Secrets management (env vars, vaults)
-- Input sanitization — **especially important with LLMs** (prompt injection is the SQL-injection of the AI era)
-
-**🛠 Projects:**
-
-- Build a full CRUD REST API (e.g. a notes app or bookstore API) with Postgres + FastAPI, fully validated with Pydantic
-- Add JWT-based auth + RBAC (admin vs regular user roles) to that API
-- Add rate limiting (Redis-backed) and pagination to the endpoints
-- Write a pytest suite with mocked external calls and get meaningful coverage
-- Add a WebSocket or SSE endpoint that streams fake "typed" text, character by character (this is a direct rehearsal for streaming LLM output later)
+## Table of Contents
+- [1. REST APIs](#1-rest-apis)
+- [2. FastAPI](#2-fastapi)
+- [3. Authentication](#3-authentication)
+- [4. Testing](#4-testing)
+- [5. Security Fundamentals](#5-security-fundamentals)
 
 ---
+
+## 1. REST APIs
+
+**Learn:**
+- [ ] HTTP fundamentals (methods, headers, status codes)
+- [ ] JSON, CRUD, REST principles
+- [ ] Status codes (2xx/3xx/4xx/5xx — used correctly, not just 200/404)
+- [ ] Pagination (offset vs cursor-based)
+- [ ] Validation
+
+**Add explicitly:**
+- [ ] GraphQL basics — just enough to know when it's the right tool vs REST
+- [ ] Idempotency & rate limiting
+
+---
+
+## 2. FastAPI
+
+**Learn:**
+- [ ] Routing
+- [ ] Pydantic models
+- [ ] Validation
+- [ ] Dependency Injection
+- [ ] Background Tasks
+- [ ] Middleware
+- [ ] Async programming (`async`/`await`, when it actually helps vs adds complexity)
+
+**Add explicitly:**
+- [ ] WebSockets — needed for streaming LLM responses to a frontend
+- [ ] Server-Sent Events (SSE) — the more common pattern for token streaming
+
+---
+
+## 3. Authentication
+
+**Learn:**
+- [ ] Sessions, Cookies
+- [ ] JWT
+- [ ] OAuth
+- [ ] Password hashing (bcrypt/argon2, salting)
+- [ ] Authorization, RBAC
+
+**Add explicitly:**
+- [ ] API key management — how you'll gate access to your own AI endpoints
+
+---
+
+## 4. Testing
+
+*(deeper than Phase 1 basics)*
+
+- [ ] Unit tests (pytest)
+- [ ] Integration tests
+- [ ] Mocking external APIs
+- [ ] Test coverage tools
+
+---
+
+## 5. Security Fundamentals
+
+- [ ] OWASP Top 10 basics
+- [ ] SQL injection
+- [ ] XSS
+- [ ] CSRF
+- [ ] Secrets management (env vars, vaults)
+- [ ] Input sanitization — especially important with LLMs (prompt injection is the SQL injection of the AI era)
+
+---
+
+## 🛠 Projects
+
+- [ ] **CRUD REST API** — Build a full CRUD REST API (notes app or bookstore API) with Postgres + FastAPI, fully validated with Pydantic.
+- [ ] **Auth + RBAC** — Add JWT-based auth and RBAC (admin vs regular user roles) to that API.
+- [ ] **Rate limiting + pagination** — Add Redis-backed rate limiting and pagination to the endpoints.
+- [ ] **Test suite** — Write a pytest suite with mocked external calls and get meaningful coverage.
+- [ ] **Streaming endpoint** — Add a WebSocket or SSE endpoint that streams fake "typed" text, character by character — a direct rehearsal for streaming LLM output later.
+
 
 ## Phase 5: Frontend (4–6 weeks)
 
