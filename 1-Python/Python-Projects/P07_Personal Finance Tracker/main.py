@@ -7,6 +7,7 @@ from data_entry import get_amount, get_category, get_date , get_descriptipn
 
 class Transtion:
     JSON_FILE = "finance_date.json"
+    CSV_FILE = "finance_date.csv"
 
     # saving data to Json file
     @classmethod
@@ -27,6 +28,10 @@ class Transtion:
         except ValueError as e:
             print(e)
             return []
+    @classmethod
+    def to_csv(cls):
+        with open(cls.CSV_FILE, "w") as file:
+            pass
             
 
 
