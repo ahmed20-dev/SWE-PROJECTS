@@ -8,11 +8,13 @@ from data_entry import get_amount, get_category, get_date , get_descriptipn
 class Transtion:
     JSON_FILE = "finance_date.json"
 
+    # saving data to Json file
     @classmethod
     def add_entry(cls,data):
         with open(cls.JSON_FILE, "w") as file:
                 json.dump(data, file)
 
+    # loading data from Json file
     @classmethod
     def load_data(cls):
         try:
@@ -41,7 +43,7 @@ def menu():
 
     print("==============================")
 
-
+# adding a new transtion from the user
 def add(data):
     date = get_date(
         "Enter the date of the transaction (dd-mm-yyyy) or enter for today's date: ",
@@ -59,6 +61,15 @@ def add(data):
     data.append(new_entry)
     Transtion.add_entry(data)
 
+# Sumarise transactions into ( totol_income, total_expense, net_saving)
+
+def get_summariry(data):
+    # get total income
+
+    # get total expense
+
+    # get net saving
+    pass
 
 def main():
     data = Transtion.load_data()
