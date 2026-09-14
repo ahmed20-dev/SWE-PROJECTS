@@ -30,8 +30,9 @@ class Transtion:
             return []
     @classmethod
     def to_csv(cls):
+        data = cls.load_data()
         with open(cls.CSV_FILE, "w") as file:
-            pass
+            file.dicwriter()
             
 
 
