@@ -4,13 +4,8 @@
 
 ## Features:
 
-* Add income
-* Add expense
+* Add transtion 
 * Categories
-* Monthly summary
-* Total income
-* Total expenses
-* Balance
+* View summary
 * Export CSV
-* Import CSV
 * Persistent JSON storage

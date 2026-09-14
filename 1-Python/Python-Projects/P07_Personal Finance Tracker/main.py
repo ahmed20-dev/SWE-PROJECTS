@@ -60,6 +60,7 @@ def add(data):
         }
     data.append(new_entry)
     Transtion.add_entry(data)
+    print("Entry added successfully.")
 
 # Sumarise transactions into ( totol_income, total_expense, net_saving)
 
@@ -72,8 +73,6 @@ def get_summary(data):
     for transtion in data:
         if transtion["Category"] == "Income":
             total_income += transtion["Amount"]
-        
-    
 
     # get total expense
     total_expense = 0
@@ -81,15 +80,18 @@ def get_summary(data):
         if transtion["Category"] == "Expense":
             total_expense += transtion["Amount"]
        
-    # get net saving
-    net_saving = total_income - total_expense
+    # get Balance
+    balance = total_income - total_expense
 
     print("\n==============================")
     print(" Personal Finance Summary")
     print("==============================")
     print(f"Total Income: ${total_income}")
     print(f"Total Expense: ${total_expense}")
-    print(f"Net Saving: ${net_saving}")
+    print(f"Balance: ${balance}")
+
+
+
 
 def main():
     data = Transtion.load_data()
