@@ -110,6 +110,3 @@ Build projects that combine multiple Python concepts.
 
 Become comfortable enough with Python to build small applications **without tutorials or AI-generated solutions**.
 
-Next focus:
-
-**Python → DSA → SQL → Backend → AI/ML**
