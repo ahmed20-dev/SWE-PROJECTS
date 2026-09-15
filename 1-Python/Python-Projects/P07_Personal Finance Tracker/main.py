@@ -5,7 +5,7 @@ from data_entry import get_amount, get_category, get_date , get_descriptipn
 
 
 
-class Transtion:
+class Transaction:
     JSON_FILE = "finance_date.json"
     CSV_FILE = "finance_date.csv"
 
@@ -30,9 +30,20 @@ class Transtion:
             return []
     @classmethod
     def to_csv(cls):
-        data = cls.load_data()
-        with open(cls.CSV_FILE, "w") as file:
-            file.dicwriter()
+        data = Transaction.load_data()
+        with open(cls.CSV_FILE, "w", newline= "") as file:
+            writer = csv.DictWriter(
+                file,
+                fieldnames=[
+                    "Date",
+                    "Amount",
+                    "Category",
+                    "Description",
+                ]
+            )
+            writer.writeheader()
+            for transaction in data:
+                writer.writerow(transaction)
             
 
 
@@ -65,7 +76,7 @@ def add(data):
         "Description": description
         }
     data.append(new_entry)
-    Transtion.add_entry(data)
+    Transaction.add_entry(data)
     print("Entry added successfully.")
 
 # Sumarise transactions into ( totol_income, total_expense, net_saving)
@@ -76,15 +87,15 @@ def get_summary(data):
         return
     # get total income
     total_income = 0
-    for transtion in data:
-        if transtion["Category"] == "Income":
-            total_income += transtion["Amount"]
+    for transaction in data:
+        if transaction["Category"] == "Income":
+            total_income += transaction["Amount"]
 
     # get total expense
     total_expense = 0
-    for transtion in data:
-        if transtion["Category"] == "Expense":
-            total_expense += transtion["Amount"]
+    for transaction in data:
+        if transaction["Category"] == "Expense":
+            total_expense += transaction["Amount"]
        
     # get Balance
     balance = total_income - total_expense
@@ -96,11 +107,23 @@ def get_summary(data):
     print(f"Total Expense: ${total_expense}")
     print(f"Balance: ${balance}")
 
+# export from csv file 
 
+def export_csv():
+    Transaction.to_csv()
+    try:
+        with open(Transaction.CSV_FILE, "r") as file:
+           reader = csv.DictReader(file)
+           print("Date,Amount,Category,Description")
+           
+           for row in reader:
+               print(f"{row['Date']},{row['Amount']},{row['Category']},{row['Description']}")
 
+    except FileNotFoundError:
+        print("File not found.")            
 
 def main():
-    data = Transtion.load_data()
+    data = Transaction.load_data()
     while True:
         menu()
         choice = input("Choice: ")
@@ -110,7 +133,7 @@ def main():
         elif choice == "2":
             get_summary(data)
         elif choice == "3":
-            pass
+            export_csv()
         elif choice == "4":
             print("Exiting.....")
             break

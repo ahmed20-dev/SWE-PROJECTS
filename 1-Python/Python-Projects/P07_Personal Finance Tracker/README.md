@@ -1,6 +1,6 @@
 # Project  — Personal Finance Tracker
 
-### Use JSON + CSV.
+### Use JSON + CSV + OOP.
 
 ## Features:
 
