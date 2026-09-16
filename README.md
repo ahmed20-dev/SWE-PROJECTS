@@ -24,6 +24,41 @@ My goal is to become a **Full-Stack + AI Engineer** capable of:
 * Qualifying for professional software engineering roles
 
 ---
+## My Learning Strategy
+
+My long-term goal is to become a Full-Stack + AI Engineer capable
+of building complete AI-powered products.
+
+I am developing this through two complementary tracks:
+
+### Track 1 — Software Engineering
+
+Build the engineering foundation required to create and deploy
+complete software systems.
+
+Python → Databases → Backend → Frontend → DevOps → System Design
+
+### Track 2 — Data Science & Machine Learning
+
+Develop the data and ML knowledge required to build and integrate
+intelligent systems.
+
+Python → Data Analysis → Machine Learning → ML Projects
+
+### Long-Term Goal
+
+Combine both tracks to build:
+
+Data + ML
+    +
+Backend + Database
+    +
+Frontend
+    +
+Deployment
+    ↓
+Full-Stack AI Systems
+
 
 # 🧭 Learning Roadmap
 
