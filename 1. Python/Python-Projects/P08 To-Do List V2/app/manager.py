@@ -1,6 +1,6 @@
 from models import Task
 from storage import Storage
-
+from validators import Validator
 
 
 class Manager:
@@ -21,7 +21,7 @@ class Manager:
     def add_task(self, task):
         self.tasks.append(task)
         Storage.save_task()
-        
+        print('Task added successfully.')
 
     def update_task(self, task_id):
         for task in self.tasks:
