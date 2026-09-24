@@ -1,5 +1,5 @@
 
-class Validators:
+class Validator:
    
    def validate_id(self):
       pass
