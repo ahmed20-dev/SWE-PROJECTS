@@ -16,23 +16,33 @@ def menu():
 
 def add_task():
     task_id = input("Enter task ID: ")
-    Validator.validate_id()
+    Validator.validate_id(id)
 
     title = input("Enter task title: ")
-    Validator.validate_title()
+    Validator.validate_title(title)
 
     description = input("Enter task description (Optional): ")
 
     priority = input("choice task priority: ")
-    Validator.validate_priority()
+    Validator.validate_priority(priority)
 
-    dou_date = input("Enter task dou date: ")
-    Validator.validate_date()
+    # dou_date = input("Enter task dou date: ")
+    # Validator.validate_date()
 
-    status = input("choice the task status")
-    Validator.validate_status()
+    status = input("is this task already completed? (Y/N)")
+    Validator.validate_status(status)
 
+    task = {
+        'ID': task_id,
+        'Title' : title,
+        'Description': description,
+        'Priority' : priority,
+        'Status' : status
+    }
 
+    
+    
+add_task()
 
 # def main():
 #     while True:
