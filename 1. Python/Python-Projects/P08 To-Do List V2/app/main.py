@@ -4,7 +4,9 @@ from storage import Storage
 from datetime import datetime
 import json
 
-
+storage = Storage()
+tasks = storage.load_task()
+validator = Validator(tasks)
 
 def menu():
     print('==== To-Do List manager ====')
@@ -15,22 +17,22 @@ def menu():
     print("5. Exit")
 
 def add_task():
-    task_id = input("Enter task ID: ")
-    Validator.validate_id(id)
+    task_id = int(input("Enter task ID: "))
+    validator.validate_id(id)
 
     title = input("Enter task title: ")
-    Validator.validate_title(title)
+    validator.validate_title(title)
 
     description = input("Enter task description (Optional): ")
 
     priority = input("choice task priority: ")
-    Validator.validate_priority(priority)
+    validator.validate_priority(priority)
 
     # dou_date = input("Enter task dou date: ")
     # Validator.validate_date()
 
     status = input("is this task already completed? (Y/N)")
-    Validator.validate_status(status)
+    validator.validate_status(status)
 
     task = {
         'ID': task_id,
@@ -39,6 +41,7 @@ def add_task():
         'Priority' : priority,
         'Status' : status
     }
+    
 
     
     
