@@ -50,7 +50,7 @@ def main():
         choice = input("Your choice: ")
 
         if choice == '1':
-            manager.view_task(tasks)
+            manager.view_task()
         elif choice == '2':
             add_task()
         elif choice == '3':

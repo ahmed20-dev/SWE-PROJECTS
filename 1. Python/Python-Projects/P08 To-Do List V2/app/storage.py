@@ -17,7 +17,6 @@ class Storage:
                 "title": task.title,
                 "description": task.description,
                 "priority": task.priority,
-                "due_date": task.due_date,
                 "status": task.status
             })
 

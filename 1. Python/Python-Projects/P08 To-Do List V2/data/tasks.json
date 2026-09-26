@@ -1,1 +1,9 @@
-[]
+[
+    {
+        "id": "1",
+        "title": "python",
+        "description": "learning OOP",
+        "priority": "high",
+        "status": "pending"
+    }
+]
