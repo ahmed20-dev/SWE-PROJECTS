@@ -4,8 +4,8 @@ from validators import Validator
 
 
 class Manager:
-    def __init__(self):
-        self.tasks = []
+    def __init__(self, tasks):
+        self.tasks = tasks
 
     def view_task(self, tassks):
         if 0 >= len(self.tasks):

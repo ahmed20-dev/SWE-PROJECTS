@@ -4,8 +4,9 @@ class Validator:
         self.tasks = tasks
 
 
-    def validate_id(self,id):
+    def validate_id(self,task_id ):
         try: 
+            task_id = int(task_id)
             if any(task["ID"] == id for task in self.tasks):
                 print("This Id already exist.")
             return id

@@ -17,8 +17,8 @@ def menu():
     print("5. Exit")
 
 def add_task():
-    task_id = int(input("Enter task ID: "))
-    validator.validate_id(id)
+    task_id = input("Enter task ID: ")
+    validator.validate_id(task_id)
 
     title = input("Enter task title: ")
     validator.validate_title(title)
