@@ -1,6 +1,6 @@
 
 class Task:
-    def __int__(self, id, title, description, priority , dou_date, status):
+    def __init__(self, id, title, description, priority , status):
         self.id = id
         self.title = title
         self.description = description

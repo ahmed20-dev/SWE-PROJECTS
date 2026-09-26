@@ -1,3 +1,4 @@
+from models import Task
 from validators import Validator
 from manager import Manager
 from storage import Storage
@@ -33,13 +34,13 @@ def add_task():
     status = input("is this task pending or completed: ").lower()
     validator.validate_status(status)
 
-    task = {
-        'ID': task_id,
-        'Title' : title,
-        'Description': description,
-        'Priority' : priority,
-        'Status' : status
-    }
+    task = Task(
+        task_id,
+        title,
+        description,
+        priority,
+        status
+    )
     manager.add_task(task)
 
 

@@ -1,6 +1,5 @@
 from models import Task
 from storage import Storage
-from validators import Validator
 
 
 class Manager:
@@ -9,7 +8,7 @@ class Manager:
         self.storage = storage
 
 
-    def view_task(self, tasks):
+    def view_task(self):
         if 0 >= len(self.tasks):
             print("There is no tasks yet.")
             return
@@ -30,9 +29,9 @@ class Manager:
             
     def delete_task(self, task_id):
         for task in self.tasks:
-            if task["id"] == task_id:
-                del self.tasks[task]
-                Storage.save_task()
+            if task.id == task_id:
+                self.tasks.remove(task)
+                self.storage.save_task(self.tasks)
                 print("Student deleted")
                 return
         print("Task not found.")
