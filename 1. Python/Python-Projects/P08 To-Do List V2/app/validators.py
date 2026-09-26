@@ -7,34 +7,26 @@ class Validator:
     def validate_id(self,task_id ):
         try: 
             task_id = int(task_id)
+            if task_id <= 0:
+                raise ValueError("ID must be greater than 0.")
             if any(task["ID"] == id for task in self.tasks):
-                print("This Id already exist.")
-            return id
+                raise ValueError("This Id already exist.")
+
         except ValueError as e:
             print(e)
-            return id
                     
     def validate_title(self,title):
-        if not id:
-            print("Title can't be empty.")
-            return
+        if not title.strip():
+            raise ValueError("Title cannot be empty")
+
         if any(task["title"] == title for task in self.tasks):
-            print('This Task already exist')
+            print('This Task title already used')
         
     def validate_priority(self, priority):
-        priorities = ['low', 'Medium', 'high']
-        if priority in priorities:
-            return priority
-        else:
-            print('Invalid priority.')
+        if priority not in ["low", "medium", "high"]:
+            raise ValueError("Invalid priority")
+        
     def validate_status(self, status):
-        if status == "y":
-            status = "Complete"
-        else:
-            status = "Pending"
-
-        return status
-
-    # def validate_date(self):
-    #     pass
+        if status not in ["pending", "completed"]:
+            raise ValueError("Invalid status")
 

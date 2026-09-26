@@ -1,7 +1,11 @@
 import json
+from pathlib import Path
+
 # handling data storage with json
 class Storage:
-    JSON_FILE = "data/tasks.json"
+    BASE_DIR = Path(__file__).resolve().parent.parent
+    JSON_FILE = BASE_DIR / "data" / "tasks.json"
+
 
     def save_task(self, tasks):
 

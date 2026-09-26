@@ -5,7 +5,6 @@ class Task:
         self.title = title
         self.description = description
         self.priority = priority
-        self.dou_date = dou_date
         self.status = status
 
         
