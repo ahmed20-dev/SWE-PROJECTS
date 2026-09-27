@@ -1,8 +1,8 @@
 [
     {
         "id": 1,
-        "title": "python",
-        "description": "",
+        "title": "javascript",
+        "description": "functions",
         "priority": "high",
         "status": "pending"
     }

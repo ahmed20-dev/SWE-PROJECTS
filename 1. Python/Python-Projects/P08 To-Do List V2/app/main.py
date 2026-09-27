@@ -50,7 +50,35 @@ def add_task():
     )
     manager.add_task(task)
 
+def update_task():
+    manager.view_task()
 
+    task_id = input("Enter the Task ID to update: ")
+
+    try:
+        task_id = int(task_id)
+    except ValueError:
+        print("ID must be a valid number.")
+        return
+
+    title = input("Enter task title: ")
+    validator.validate_title(title)
+
+    description = input("Enter task description (Optional): ")
+
+    priority = input("Choose task priority: ")
+    validator.validate_priority(priority)
+
+    status = input("Is this task pending or completed: ").lower()
+    validator.validate_status(status)
+
+    manager.update_task(
+        task_id,
+        title,
+        description,
+        priority,
+        status
+    )
 
 def main(): 
     while True:
@@ -62,13 +90,14 @@ def main():
         elif choice == '2':
             add_task()
         elif choice == '3':
-            pass
+            update_task()
         elif choice == '4':
             task_id = input("Enter the task ID to delete: ")
             manager.delete_task(task_id)
-            
+
         elif choice == '5':
             print('Exiting...')
+            break
         else:
             print('Invalid choice.')
 

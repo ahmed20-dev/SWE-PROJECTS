@@ -24,10 +24,22 @@ class Manager:
         self.storage.save_task(self.tasks)
         print('Task added successfully.')
 
-    def update_task(self, updated_task):
-        pass
+    def update_task(self, task_id, title, description, priority, status):
+        for task in self.tasks:
+            if task.id == task_id:
+                task.title = title
+                task.description = description
+                task.priority = priority
+                task.status = status
+
+                self.storage.save_task(self.tasks)
+                print("Task updated successfully.")
+                return
+
+        print("Task not found.")
+    
             
-    def delete_task(self, task_id):
+    def delete_task(self, task_id,):
         task_id = int(task_id)
 
         for task in self.tasks:
