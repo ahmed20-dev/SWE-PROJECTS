@@ -26,7 +26,7 @@ def add_task():
         task_id = validator.validate_id(task_id)
 
         title = input("Enter task title: ")
-        validator.validate_title(title)
+        title = validator.validate_title(title)
 
         description = input("Enter task description (Optional): ")
 
