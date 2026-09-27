@@ -36,7 +36,6 @@ class Storage:
                     item["title"],
                     item["description"],
                     item["priority"],
-                    item["due_date"],
                     item["status"]
                 )
 

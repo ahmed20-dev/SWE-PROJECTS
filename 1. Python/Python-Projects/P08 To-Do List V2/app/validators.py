@@ -4,22 +4,23 @@ class Validator:
         self.tasks = tasks
 
 
-    def validate_id(self,task_id ):
-        try: 
-            task_id = int(task_id)
-            if task_id <= 0:
-                raise ValueError("ID must be greater than 0.")
-            if any(task["ID"] == id for task in self.tasks):
-                raise ValueError("This Id already exist.")
+    def validate_id(self, task_id):
+        task_id = int(task_id)
 
-        except ValueError as e:
-            print(e)
-                    
+        if task_id <= 0:
+            raise ValueError("ID must be greater than 0.")
+
+        for task in self.tasks:
+            if task.id == task_id:
+                raise ValueError("This ID already exists.")
+
+        return task_id
+                        
     def validate_title(self,title):
         if not title.strip():
             raise ValueError("Title cannot be empty")
 
-        if any(task["title"] == title for task in self.tasks):
+        if any(task.title == title for task in self.tasks):
             print('This Task title already used')
         
     def validate_priority(self, priority):
