@@ -19,19 +19,12 @@ class Validator:
     def validate_title(self,title):
         if not title.strip():
             raise ValueError("Title cannot be empty")
-
-        for task in self.tasks:
-            if task.title == title:
-                raise ValueError("This task title already used.")
-        return title
         
     def validate_priority(self, priority):
         if priority not in ["low", "medium", "high"]:
             raise ValueError("Invalid priority")
-        return priority
-        
+   
     def validate_status(self, status):
         if status not in ["pending", "completed"]:
             raise ValueError("Invalid status")
-        return property
 

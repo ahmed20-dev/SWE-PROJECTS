@@ -20,32 +20,36 @@ def menu():
     print("5. Exit\n")
 
 def add_task():
-    try:
+    while True:
+        try:
             
-        task_id = input("Enter task ID: ")
-        task_id = validator.validate_id(task_id)
+            task_id = input("Enter task ID: ")
+            task_id = validator.validate_id(task_id)
+            break
+        
+        except ValueError as e:
+                print(f"Error: {e}")
 
-        title = input("Enter task title: ")
-        title = validator.validate_title(title)
+    title = input("Enter task title: ")
+    validator.validate_title(title)
 
-        description = input("Enter task description (Optional): ")
+    description = input("Enter task description (Optional): ")
 
-        priority = input("choice task priority: ")
-        validator.validate_priority(priority)
+    priority = input("choice task priority: ")
+    validator.validate_priority(priority)
 
-        status = input("is this task pending or completed: ").lower()
-        validator.validate_status(status)
+    status = input("is this task pending or completed: ").lower()
+    validator.validate_status(status)
 
-        task = Task(
-            task_id,
-            title,
-            description,
-            priority,
-            status
-        )
-        manager.add_task(task)
-    except ValueError as e:
-        print(f"Error: {e}")
+    task = Task(
+        task_id,
+        title,
+        description,
+        priority,
+        status
+    )
+    manager.add_task(task)
+
 
 def main(): 
     while True:
