@@ -1,28 +1,7 @@
 [
     {
-        "id": "1",
-        "title": "python",
-        "description": "learning OOP",
-        "priority": "high",
-        "status": "pending"
-    },
-    {
-        "id": "1",
-        "title": "pyhon",
-        "description": "functions",
-        "priority": "low",
-        "status": "completed"
-    },
-    {
-        "id": "1",
-        "title": "python",
-        "description": "",
-        "priority": "high",
-        "status": "pending"
-    },
-    {
         "id": 1,
-        "title": "title",
+        "title": "python",
         "description": "",
         "priority": "high",
         "status": "pending"

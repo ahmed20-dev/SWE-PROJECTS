@@ -28,12 +28,15 @@ class Manager:
         pass
             
     def delete_task(self, task_id):
+        task_id = int(task_id)
+
         for task in self.tasks:
             if task.id == task_id:
                 self.tasks.remove(task)
                 self.storage.save_task(self.tasks)
-                print("Student deleted")
+                print("Task deleted")
                 return
+            
         print("Task not found.")
 
     def mark_task(self):

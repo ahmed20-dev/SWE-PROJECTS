@@ -32,7 +32,7 @@ class Storage:
 
             for item in data:
                 task = Task(
-                    item["id"],
+                    int(item["id"]),
                     item["title"],
                     item["description"],
                     item["priority"],

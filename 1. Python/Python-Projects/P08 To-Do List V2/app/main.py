@@ -26,7 +26,7 @@ def add_task():
             task_id = input("Enter task ID: ")
             task_id = validator.validate_id(task_id)
             break
-        
+
         except ValueError as e:
                 print(f"Error: {e}")
 
@@ -51,6 +51,7 @@ def add_task():
     manager.add_task(task)
 
 
+
 def main(): 
     while True:
         menu()
@@ -63,7 +64,9 @@ def main():
         elif choice == '3':
             pass
         elif choice == '4':
-            manager.delete_task()
+            task_id = input("Enter the task ID to delete: ")
+            manager.delete_task(task_id)
+            
         elif choice == '5':
             print('Exiting...')
         else:
