@@ -3,7 +3,7 @@ from validators import Validator
 from manager import Manager
 from storage import Storage
 from datetime import datetime
-import json
+
 
 storage = Storage()
 tasks = storage.load_task()
