@@ -5,7 +5,10 @@ class Validator:
 
 
     def validate_id(self, task_id):
-        task_id = int(task_id)
+        try:
+            task_id = int(task_id)
+        except ValueError:
+            raise ValueError("Id must be a number.")
 
         if task_id <= 0:
             raise ValueError("ID must be greater than 0.")
