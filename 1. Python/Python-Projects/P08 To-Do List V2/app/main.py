@@ -17,6 +17,7 @@ def menu():
     print("2. Add task")
     print("3. Update task")
     print("4. Delete task")
+    print("5. Mark task as a completed")
     print("5. Exit\n")
 
 def add_task():
@@ -92,10 +93,16 @@ def main():
         elif choice == '3':
             update_task()
         elif choice == '4':
+            manager.view_task()
             task_id = input("Enter the task ID to delete: ")
             manager.delete_task(task_id)
 
-        elif choice == '5':
+        elif choice == "5":
+            manager.view_task()
+            task_id =  input("Enter the task ID to mark: ")
+            manager.mark_task(task_id)
+            
+        elif choice == '6':
             print('Exiting...')
             break
         else:

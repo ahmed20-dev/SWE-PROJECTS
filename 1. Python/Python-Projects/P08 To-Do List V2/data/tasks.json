@@ -1,16 +1,9 @@
 [
     {
-        "id": 1,
-        "title": "javascript",
-        "description": "functions",
-        "priority": "high",
-        "status": "pending"
-    },
-    {
         "id": 2,
         "title": "python",
         "description": "learning OOP",
         "priority": "high",
-        "status": "pending"
+        "status": "completed"
     }
 ]

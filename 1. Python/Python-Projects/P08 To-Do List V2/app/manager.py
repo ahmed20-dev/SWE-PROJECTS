@@ -40,8 +40,12 @@ class Manager:
     
             
     def delete_task(self, task_id,):
-        task_id = int(task_id)
-
+        try:
+            task_id = int(task_id)
+        except ValueError:
+            print("ID must be an exist ID.")
+            return
+        
         for task in self.tasks:
             if task.id == task_id:
                 self.tasks.remove(task)
@@ -51,7 +55,27 @@ class Manager:
             
         print("Task not found.")
 
-    def mark_task(self):
-        pass
+    def mark_task(self, task_id):
+        try:
+            task_id = int(task_id)
+        except ValueError:
+                print("ID must be an exist ID.")
+                return
+        
+        for task in self.tasks:
+            if task.id == task_id:
+                if task.status != "completed":
+                    task.status = "completed"
+                    self.storage.save_task(self.tasks)
+                    print("Task marked as a completed.")
+                    return
+                print("This task already marked")
+                return
+        print("Task not found.")
+     
+                
+
+
+        
 
 
