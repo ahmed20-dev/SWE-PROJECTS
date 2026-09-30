@@ -1,804 +1,415 @@
 # Software Engineering Journey
 
-> **From beginner to Full-Stack + AI Engineer.**
+> Becoming a Full-Stack + AI Engineer by shipping software that real people use.
 
-This repository documents my journey from learning programming fundamentals to becoming a professional software engineer.
-
-It is my **proof of work** — a record of what I learn, what I build, the problems I solve, the decisions I make, and how my engineering skills develop over time.
+**Learn → Build → Show a real user → Fix → Document**
 
 ---
 
-# 🎯 Goal
+## 🎯 Now
 
-My goal is to become a **Full-Stack + AI Engineer** capable of:
-
-* Building production-quality software independently
-* Designing and developing complete applications
-* Building reliable backend systems and APIs
-* Designing and working with databases
-* Developing modern frontend applications
-* Deploying and maintaining applications
-* Applying software engineering principles
-* Designing scalable systems
-* Building and integrating AI/ML systems
-* Solving real-world problems with software
-* Qualifying for professional software engineering roles
+|                   |                                |
+| ----------------- | ------------------------------ |
+| **Current phase** | Phase 2 — Databases + Backend  |
+| **Working on**    | Pharmacy Inventory API         |
+| **Learning**      | SQL joins, PostgreSQL, FastAPI |
+| **Next**          | Shop POS Backend               |
+| **Last updated**  | 2026-10-01                     |
 
 ---
 
-# 🧭 My Learning Strategy
+## 📊 Project Tracker
 
-I am developing two complementary sides of my engineering skill set.
+**Status:** ⬜ Planned · 🔨 Building · 🧪 Testing · 🚀 Deployed · 👤 Real User · ✅ Completed
 
-## Track 1 — Software Engineering
+| #  | Project                   | Phase | Type           | Status | Real User     | Stack                      | Code                   | Live |
+| -- | ------------------------- | ----- | -------------- | ------ | ------------- | -------------------------- | ---------------------- | ---- |
+| 1  | Trivia Game               | 1     | Learning       | ✅      | —             | Python                     | [Code](./1.%20Python)  | —    |
+| 2  | Password Generator        | 1     | Learning       | ✅      | —             | Python                     | [Code](./1.%20Python)  | —    |
+| 3  | Calculator                | 1     | Learning       | ✅      | —             | Python                     | [Code](./1.%20Python)  | —    |
+| 4  | To-Do List V1             | 1     | Learning       | ✅      | —             | Python                     | [Code](./1.%20Python)  | —    |
+| 5  | Student Management System | 1     | Learning       | ✅      | —             | Python                     | [Code](./1.%20Python)  | —    |
+| 6  | Personal Finance Tracker  | 1     | Practical      | ✅      | Myself        | Python                     | [Code](./1.%20Python)  | —    |
+| 7  | Shop Debt Ledger          | 1     | Real-world     | ⬜      | Shopkeeper    | Python, CSV                | —                      | —    |
+| 8  | Pharmacy Inventory API    | 2     | Real-world     | 🔨     | Pharmacy      | FastAPI, PostgreSQL        | [Code](./3.%20backend) | —    |
+| 9  | Shop POS Backend          | 2     | Real-world     | ⬜      | Shop          | FastAPI, PostgreSQL        | —                      | —    |
+| 10 | Small Business Website    | 3     | Real-world     | ⬜      | Client        | HTML, CSS, JS              | —                      | —    |
+| 11 | Restaurant Ordering UI    | 3     | Real-world     | ⬜      | Restaurant    | React                      | —                      | —    |
+| 12 | **ShopFlow**              | 4     | Flagship       | ⬜      | Pilot shop    | React, FastAPI, PostgreSQL | —                      | —    |
+| 13 | Sales Forecasting         | 5     | AI/ML          | ⬜      | Pilot shop    | Pandas, Scikit-learn       | —                      | —    |
+| 14 | Student Risk Predictor    | 5     | AI/ML          | ⬜      | School        | Scikit-learn               | —                      | —    |
+| 15 | Invoice Scanner           | 6     | AI Application | ⬜      | Shop          | OCR, LLM API               | —                      | —    |
+| 16 | Business Chatbot          | 6     | AI Application | ⬜      | Business      | LLM API, WhatsApp          | —                      | —    |
+| 17 | Portfolio Website         | 7     | Professional   | ⬜      | —             | React                      | —                      | —    |
+| 18 | **ShopFlow AI**           | 8     | Flagship       | ⬜      | 3+ businesses | Full-stack + AI            | —                      | —    |
 
-My primary engineering track is focused on learning how to build and ship complete software systems.
-
-```text
-Python
-   ↓
-Data Structures & Algorithms
-   ↓
-SQL & Databases
-   ↓
-Backend Development
-   ↓
-Frontend Development
-   ↓
-Docker & Deployment
-   ↓
-System Design
-   ↓
-Full-Stack Applications
-```
-
-The goal is to become capable of taking a software idea from **problem → implementation → deployment**.
-
----
-
-## Track 2 — Data Science & Machine Learning
-
-My second track develops the data and machine learning foundations that I can later integrate into my software systems.
-
-```text
-Python
-   ↓
-NumPy / Pandas
-   ↓
-Data Analysis
-   ↓
-Machine Learning
-   ↓
-ML Projects
-   ↓
-AI Integration
-```
-
-This track is currently supported by my **GCI World 2026** learning experience.
-
-The purpose is not to become a separate data scientist first. The purpose is to develop enough data and ML knowledge to eventually build better AI-powered software systems.
+> Real-user status is only updated after someone has actually used the software.
 
 ---
 
-## Long-Term Direction
+## 🗺️ Engineering Roadmap
 
-The two tracks eventually come together:
+### Phase 1 — Python & Problem Solving
 
-```text
-Software Engineering
-        +
-Data Science & ML
-        ↓
-Backend + Database
-        +
-Frontend
-        +
-Deployment
-        +
-AI / ML
-        ↓
-Full-Stack AI Systems
-```
+**Goal:** Build strong programming fundamentals.
 
----
-
-# 🗺️ Knowledge Roadmap
-
-This is my **long-term knowledge map**, not a strict schedule.
-
-I do not need to learn everything here at once.
-
-My current focus determines what I study now. The roadmap shows the broader engineering knowledge I want to develop over time.
-
-```text
-Programming
-     ↓
-Computer Science
-     ↓
-Databases
-     ↓
-Backend
-     ↓
-Frontend
-     ↓
-DevOps & Deployment
-     ↓
-System Design
-     ↓
-AI / Machine Learning
-```
-
-The objective is not simply to complete courses.
-
-The objective is:
-
-**Learn → Practice → Build → Debug → Document → Improve → Repeat**
-
----
-
-# 📚 Knowledge Areas
-
-## 1. Programming Fundamentals
-
-### Python
-
-* Variables and data types
-* Control flow
-* Functions
+* Python fundamentals
 * Data structures
-* File handling
-* Exceptions
-* Modules and packages
-* `pip`
-* Virtual environments
-* Object-Oriented Programming
-* Testing basics
-* Type hints
-* Decorators
-* Context managers
-* Iterators and generators
-
-### Git & GitHub
-
-* Commits
-* Branches
-* Pull requests
-* Merge conflicts
-* Rebase vs merge
-* `.gitignore`
-* GitHub workflow
-* Collaboration basics
-
-### Linux
-
-* Terminal
-* File system
-* Permissions
-* Bash
-* SSH
-* Package management
-* Processes
-* Basic system administration
-
-### Mathematics
-
-* Algebra
-* Logic
-* Probability
-* Statistics
-* Big-O intuition
-* Vectors and matrices
-* Basic linear algebra
-
----
-
-# 2. Computer Science
-
-## Data Structures
-
-* Arrays
-* Strings
-* Linked Lists
-* Stacks
-* Queues
-* Hash Tables
-* Heaps
-* Trees
-* Graphs
-* Tries
-
-## Algorithms
-
-* Searching
-* Sorting
-* Recursion
-* Breadth-First Search
-* Depth-First Search
-* Dynamic Programming
-* Algorithm analysis
-* Big-O complexity
-
-## Practice
-
-* LeetCode
-* HackerRank
-* CSES Problem Set
-
-## Projects
-
-* Implement core data structures from scratch
-* Build a Trie-based autocomplete system
-* Build a graph search system using BFS/DFS
-
----
-
-# 3. Databases
-
-## SQL
-
-* Database and table creation
-* `SELECT`
-* `INSERT`
-* `UPDATE`
-* `DELETE`
-* `WHERE`
-* `ORDER BY`
-* `GROUP BY`
-* `HAVING`
-* `JOIN`
-* Subqueries
-* CTEs
-* Window functions
-* Aggregations
-* Constraints
-* Indexes
-* Transactions
-* Query optimization
-* `EXPLAIN`
-
-## PostgreSQL
-
-* Database design
-* Schemas
-* Primary keys
-* Foreign keys
-* Relationships
-* Normalization
-* Constraints
-* Indexes
-* Transactions
-* Backup and restore
-* Migrations
-* Connection pooling
-
-## Other Data Stores
-
-* Redis
-* MongoDB
-* Vector databases
-* `pgvector`
-
-## Projects
-
-* Design relational schemas
-* Migrate Python projects from JSON/CSV to PostgreSQL
-* Build database-backed applications
-* Add Redis caching
-* Experiment with vector search
-
----
-
-# 4. Backend Development
-
-## Web Fundamentals
-
-* HTTP
-* Request / response
-* Methods
-* Headers
-* Status codes
-* JSON
-* REST
-* CRUD
-* Validation
-* Pagination
-* Error handling
-
-## FastAPI
-
-* Routing
-* Pydantic
-* Dependency injection
-* Middleware
-* Background tasks
-* Async programming
-* API documentation
-* WebSockets
-* Server-Sent Events
-
-## Authentication & Authorization
-
-* Sessions
-* Cookies
-* Password hashing
-* JWT
-* OAuth
-* RBAC
-* API keys
-
-## Testing
-
-* `pytest`
-* Unit testing
-* Integration testing
-* Mocking
-* Test coverage
-
-## Security
-
-* OWASP fundamentals
-* SQL injection
-* XSS
-* CSRF
-* Secrets management
-* Input validation
-* API security
-* Prompt injection fundamentals
-
-## Projects
-
-* CRUD REST API
-* FastAPI + PostgreSQL application
-* Authentication + RBAC system
-* Paginated API
-* Rate-limited API
-* Tested API
-* Streaming API
-
----
-
-# 5. Frontend Development
-
-## HTML
-
-* Semantic HTML
-* Forms
-* Accessibility
-
-## CSS
-
-* Box model
-* Flexbox
-* Grid
-* Responsive design
-* CSS variables
-* Layout
-* Specificity
-
-## JavaScript
-
-* Variables
 * Functions
-* Objects
-* Arrays
-* ES6+
-* Modules
-* DOM
-* Events
-* Promises
-* `async` / `await`
-* Fetch API
+* Error handling
+* File handling
+* Object-oriented programming
+* Git & GitHub
+* Small practical projects
 
-## React
+**Output:** Python projects that demonstrate progressively stronger programming and OOP skills.
 
-* Components
-* Props
-* State
-* Hooks
-* Routing
-* Context
-* State management
+---
 
-## Next.js
+### Phase 2 — Databases & Backend
 
-* App Router
-* Server Components
-* API routes
-* SSR
-* SSG
+**Goal:** Build reliable data-driven backend systems.
+
+* SQL
+* PostgreSQL
+* Database design
+* Relationships and joins
+* Python ↔ PostgreSQL
+* REST APIs
+* FastAPI
 * Authentication
-* Streaming UI
+* Validation
+* Testing
 
-## Projects
+**Current:** Pharmacy Inventory API
 
-* Static portfolio
-* React frontend for a backend API
-* Full-stack Next.js application
-* AI/chat interface with streamed responses
+**Next:** Shop POS Backend
 
 ---
 
-# 6. DevOps & Deployment
+### Phase 3 — Frontend
 
-## Docker
+**Goal:** Build usable interfaces for backend systems.
 
-* Images
-* Containers
-* Dockerfiles
-* Volumes
-* Networking
-* Docker Compose
+* HTML
+* CSS
+* JavaScript
+* Responsive design
+* React
+* API integration
+* Forms and validation
+* Frontend state management
 
-## Deployment
-
-* Linux servers
-* Environment variables
-* HTTPS
-* Nginx
-* CI/CD
-* GitHub Actions
-* Cloud platforms
-
-## Observability
-
-* Logging
-* Metrics
-* Monitoring
-* Error tracking
-* Application health
-
-## Projects
-
-* Dockerize a full-stack application
-* Create a CI/CD pipeline
-* Deploy an application
-* Add logging and monitoring
+**Output:** Complete interfaces that communicate with real backend APIs.
 
 ---
 
-# 7. System Design
+### Phase 4 — Full-Stack Product Engineering
 
-* Scalability
-* Vertical vs horizontal scaling
-* Load balancing
-* Caching
-* Database scaling
-* Read replicas
-* Queues
-* Asynchronous processing
-* Microservices vs monolith
-* API gateways
-* CAP theorem
-* Eventual consistency
-* Rate limiting
-* Retries
-* Timeouts
-* Failure handling
+**Goal:** Combine frontend, backend, and databases into a real product.
 
-## AI System Design
+### ShopFlow
 
-* RAG architectures
-* AI application architecture
-* LLM inference services
-* Recommendation systems
-* Data pipelines
+A full-stack business management system designed around the needs of small businesses.
 
-## Projects
+**Stack:**
 
-* Design and implement a rate limiter
-* Build an asynchronous job-processing system
-* Write system design documents
-* Design a scalable RAG application
+`React → FastAPI → PostgreSQL`
+
+Focus:
+
+* Authentication
+* Products
+* Inventory
+* Sales
+* Customers
+* Reports
+* Dashboard
+* Business workflows
+* Real-user testing
+
+**Target:** 1 pilot business.
 
 ---
 
-# 8. AI & Machine Learning
+### Phase 5 — Data & Machine Learning
 
-## Applied AI / LLM Engineering
-
-* Tokens
-* Context windows
-* Embeddings
-* Attention
-* Prompt engineering
-* Structured outputs
-* LLM APIs
-* RAG
-* Vector search
-* Reranking
-* Tool calling
-* Agents
-* Evaluation
-* Cost optimization
-* Latency optimization
-* Guardrails
-* AI security
-
-## Machine Learning Foundations
+**Goal:** Learn how to turn business data into useful predictions and insights.
 
 * NumPy
 * Pandas
-* Data analysis
+* Data cleaning
+* Exploratory data analysis
+* Statistics
 * Data visualization
 * Scikit-learn
-* Supervised learning
-* Unsupervised learning
 * Model evaluation
-* Feature engineering
-* Neural networks
-* Transformers
-* PyTorch
-* MLOps fundamentals
+* Forecasting
 
-## Projects
+**Projects:**
 
-* ML data analysis projects
-* Machine learning prediction project
-* RAG application
-* AI-powered FastAPI application
-* AI assistant connected to an API
-* AI feature integrated into a full-stack application
-* End-to-end AI product
+* Sales Forecasting
+* Student Risk Predictor
 
 ---
 
-# 🛠️ Projects
+### Phase 6 — AI Applications
 
-Projects are the primary evidence of my practical progress.
+**Goal:** Integrate AI into practical software systems.
 
-I use them to turn knowledge into engineering ability.
+* LLM APIs
+* Prompt engineering
+* Embeddings
+* RAG
+* OCR
+* AI workflows
+* Chatbots
+* AI-powered business tools
 
-## Python Projects
+**Projects:**
 
-* [x] Trivia Game
-* [x] Random Password Generator
-* [x] Calculator
-* [x] To-Do List V1
-* [x] Student Management System V1
-* [x] Personal Finance Tracker
-
-My projects progressively introduce:
-
-```text
-Python Fundamentals
-        ↓
-Functions & OOP
-        ↓
-File Handling
-        ↓
-JSON / CSV
-        ↓
-Structured Applications
-        ↓
-Databases
-        ↓
-APIs
-        ↓
-Full-Stack Systems
-        ↓
-AI-Powered Applications
-```
+* Invoice Scanner
+* Business Chatbot
 
 ---
 
-# 📈 Project Progression
+### Phase 7 — Deployment & Professional Engineering
 
-I do not want to build projects simply for the sake of having many repositories.
+**Goal:** Move from working software to production-ready systems.
 
-I want each stage to produce more realistic and complete systems.
-
-```text
-Simple Scripts
-      ↓
-CLI Applications
-      ↓
-Structured Python Applications
-      ↓
-Database Applications
-      ↓
-REST APIs
-      ↓
-Full-Stack Applications
-      ↓
-Production Deployments
-      ↓
-Scalable Systems
-      ↓
-AI-Powered Applications
-```
-
-The goal is **progressively better software**, not simply more software.
-
----
-
-# 🔬 Proof of Work
-
-This repository is more than a collection of code.
-
-For important projects, I document:
-
-* What I learned
-* What I built
-* Why I built it
-* Requirements
-* Technical decisions
-* Problems encountered
-* Debugging process
-* Solutions
-* Architecture
-* Database design
+* Linux
+* Docker
+* Cloud deployment
+* CI/CD
 * Testing
-* Improvements
-* Lessons learned
+* Security
+* Logging
+* Monitoring
+* Performance
+* System design
 
-## Learning Cycle
-
-```text
-Learn
-  ↓
-Practice
-  ↓
-Build
-  ↓
-Encounter Problems
-  ↓
-Debug & Research
-  ↓
-Solve
-  ↓
-Document
-  ↓
-Improve
-  ↓
-Build Something More Complex
-```
-
-The final code is only part of the proof.
-
-The **engineering process is also part of the proof**.
+**Output:** Deployable, maintainable software that can be used outside the development environment.
 
 ---
 
-# 🧠 Engineering Principles
+### Phase 8 — AI Product Engineering
 
-Throughout this journey, I aim to develop these habits:
+**Goal:** Combine full-stack engineering, data, and AI into products used by real businesses.
 
-* Understand before copying
-* Build instead of only watching tutorials
-* Solve problems independently
-* Read official documentation
-* Use AI as a learning and debugging tool, not as a replacement for understanding
-* Debug systematically
-* Write maintainable code
-* Use Git properly
-* Test software
-* Think about security
-* Design before implementing complex systems
-* Document important decisions
-* Refactor when necessary
-* Learn from failures
-* Build progressively more difficult systems
+### ShopFlow AI
+
+The evolution of ShopFlow with AI-powered capabilities.
+
+Focus:
+
+* Business intelligence
+* Forecasting
+* Automated reports
+* AI assistants
+* Document processing
+* Recommendations
+* Workflow automation
+* Production reliability
+* Cost optimization
+
+**Target:** 3+ real businesses.
 
 ---
 
-# 📊 Current Direction
+## 🧩 What I'm Building Toward
 
-**Target:** Full-Stack + AI Engineer
-
-## Current Software Engineering Focus
+I want to build software for real businesses and organizations by combining **software engineering, data, and AI**.
 
 ```text
 Python
    ↓
-Python Projects
+Databases
    ↓
-Git & GitHub
-   ↓
-SQL
-   ↓
-PostgreSQL
-   ↓
-Python + PostgreSQL
-   ↓
-Backend Development
-```
-
-My immediate objective is to strengthen Python while moving from file-based applications toward **database-backed applications**.
-
-## Current Data / ML Focus
-
-```text
-Python
-   ↓
-NumPy
-   ↓
-Pandas
-   ↓
-Data Analysis
-   ↓
-Machine Learning
-```
-
-This track is being developed alongside my software engineering path.
-
----
-
-# 📅 Progress Log
-
-I track meaningful milestones rather than simply counting study hours.
-
-```text
-[x] Learned Python fundamentals
-[x] Built first Python project
-[x] Learned functions
-[x] Learned file handling
-[x] Built multiple CLI applications
-[x] Built Student Management System
-[x] Built Personal Finance Tracker
-[ ] Strengthen Python / OOP
-[ ] Learn SQL
-[ ] Learn PostgreSQL
-[ ] Migrate Python project to PostgreSQL
-[ ] Build database-backed application
-[ ] Learn FastAPI
-[ ] Build REST API
-[ ] Build full-stack application
-[ ] Learn Docker
-[ ] Deploy application
-[ ] Learn system design
-[ ] Build AI/ML projects
-[ ] Integrate AI into a full-stack application
-[ ] Build complete AI-powered product
-```
-
----
-
-# 🎯 Long-Term Objective
-
-I want to become an engineer capable of taking a real-world problem through the complete software development process.
-
-```text
-Real-World Problem
-        ↓
-Requirements
-        ↓
-System Design
-        ↓
-Architecture
-        ↓
-Implementation
-        ↓
-Database
-        ↓
 Backend
-        ↓
+   ↓
 Frontend
-        ↓
-Testing
-        ↓
-Deployment
-        ↓
-Monitoring
-        ↓
-Scaling
-        ↓
-AI / ML Integration
-        ↓
-Complete AI-Powered Product
+   ↓
+Full-Stack Systems
+   ↓
+Deployment & Cloud
+   ↓
+System Design
+   ↓
+Data & ML
+   ↓
+AI Engineering
+   ↓
+AI-Powered Products
 ```
 
-The ultimate objective is to build **working, maintainable, secure, scalable, and deployable software systems that solve real problems**.
+### Product Direction
+
+Areas I am interested in building for:
+
+* Small and medium businesses
+* Education
+* Healthcare
+* Local business operations
+* AI-powered productivity
+* Underserved markets
 
 ---
 
-# 🚧 Status
+## 📈 Engineering Progress
 
-**Journey:** In Progress
+| Metric                       | Goal | Now |
+| ---------------------------- | ---: | --: |
+| Projects completed           |  12+ |   6 |
+| Projects deployed            |   4+ |   0 |
+| Projects with tests          |   8+ |   0 |
+| Real users reached           |  10+ |   0 |
+| Businesses using my software |   3+ |   0 |
+| Flagship systems             |    2 |   0 |
+| Paying clients               |   1+ |   0 |
+| User feedback entries        |  10+ |   0 |
 
-**Target:** Full-Stack + AI Engineer
+> These numbers measure shipped work and real-world validation, not just time spent learning.
 
-**Learning Model:**
+---
 
-> **Learn → Build → Debug → Document → Improve**
+## ✅ Project Standards
 
-This repository is a record of the work required to become the engineer I want to be.
+### Learning Projects
+
+A learning project should have:
+
+* [ ] Working implementation
+* [ ] README
+* [ ] Clean code
+* [ ] Key concepts documented
+* [ ] What I learned
+* [ ] What broke and how I fixed it
+
+### Real-World Projects
+
+A real-world project should have:
+
+* [ ] Clear user problem
+* [ ] Working MVP
+* [ ] README
+* [ ] Documentation
+* [ ] Real person has tested it
+* [ ] Feedback recorded
+* [ ] Improvements based on feedback
+
+### Flagship Projects
+
+A flagship project should additionally have:
+
+* [ ] Real problem
+* [ ] Production architecture
+* [ ] Database
+* [ ] Authentication and authorization
+* [ ] Automated tests
+* [ ] Deployment
+* [ ] Logging and monitoring
+* [ ] Real users
+* [ ] Iterative improvements
+* [ ] Measurable usage
+
+---
+
+## 📝 Feedback Log
+
+Real users are part of the development process.
+
+| Date | Project | User | Feedback / Problem | What I Changed |
+| ---- | ------- | ---- | ------------------ | -------------- |
+| —    | —       | —    | —                  | —              |
+
+---
+
+## 📁 Repository Structure
+
+```text
+SWE-PROJECTS/
+│
+├── 1. Python/
+│   └── Python projects and fundamentals
+│
+├── 2. Databases/
+│   └── SQL, PostgreSQL, and database projects
+│
+├── 3. backend/
+│   └── FastAPI and backend systems
+│
+├── 4. Data Science & ML/
+│   └── Data analysis, ML, and experiments
+│
+├── docs/
+│   └── KNOWLEDGE_MAP.md
+│
+└── README.md
+```
+
+### Project Structure
+
+Where appropriate, projects should follow a structure similar to:
+
+```text
+project-name/
+├── README.md
+├── src/
+├── tests/
+└── ...
+```
+
+The structure will evolve as the projects become more complex.
+
+---
+
+## 🧭 Engineering Knowledge Map
+
+```text
+                    Software Engineering
+                            │
+          ┌─────────────────┼─────────────────┐
+          ↓                 ↓                 ↓
+       Python           Databases          Linux
+          │                 │                 │
+          └────────────┬────┴─────────────────┘
+                       ↓
+                    Backend
+                       ↓
+                    Frontend
+                       ↓
+                 Full-Stack Systems
+                       ↓
+              Deployment & Cloud
+                       ↓
+                  System Design
+                       ↓
+                  Data & ML
+                       ↓
+                AI Engineering
+                       ↓
+               AI-Powered Products
+```
+
+Detailed topics are documented in [`docs/KNOWLEDGE_MAP.md`](./docs/KNOWLEDGE_MAP.md).
+
+---
+
+## 🧠 Principles
+
+* **Start with a real problem.**
+* **Talk to users before building too much.**
+* **Ship an ugly V1, then improve it.**
+* **Read the documentation and debug before reaching for a tutorial.**
+* **Use AI to learn, not to skip understanding.**
+* **Prefer working software over excessive planning.**
+* **Cut scope, never the real-user test.**
+* **Document what broke, not only what worked.**
+* **Measure progress through shipped software and real-world feedback.**
+* **Build toward products, not isolated technologies.**
+
+---
+
+> **The goal is not to learn every technology.**
+>
+> **The goal is to become capable of taking a real problem from idea → software → real users → continuous improvement.**
