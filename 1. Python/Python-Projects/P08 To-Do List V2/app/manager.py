@@ -72,7 +72,16 @@ class Manager:
                 print("This task already marked")
                 return
         print("Task not found.")
-     
+
+    # Sammurize by priority, dou dates and status
+    def summarize_tasks(self):
+        for task in self.tasks:
+            if task.priority == "high" and task.status == "pending":
+                print("== High priority tasks and still uncompleted ==")
+                self.view_task()
+        print("There are not high priority tasks these uncompleted")
+                
+
                 
 
 

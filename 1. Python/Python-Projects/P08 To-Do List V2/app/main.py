@@ -101,8 +101,11 @@ def main():
             manager.view_task()
             task_id =  input("Enter the task ID to mark: ")
             manager.mark_task(task_id)
+
+        elif choice == "6":
+            manager.summarize_tasks()
             
-        elif choice == '6':
+        elif choice == '7':
             print('Exiting...')
             break
         else:
