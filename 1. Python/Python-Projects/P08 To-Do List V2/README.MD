@@ -14,14 +14,14 @@ This is a V2 of my earlier To-Do List project. The goal is not to add many featu
 
 ## Features
 
-* Add tasks
-* View tasks
-* Update tasks
-* Delete tasks
-* Mark tasks as completed
+* ✅Add tasks
+* ✅View tasks
+* ✅Update tasks
+* ✅Delete tasks
+* ✅Mark tasks as completed
 * Search tasks
-* Filter tasks by status
-* Filter tasks by priority
+* ✅Filter tasks by status
+* ✅Filter tasks by priority
 * Set task priority
 * Set due dates
 * Save tasks to JSON
@@ -52,32 +52,32 @@ P08_Todo_List_V2/
 
 ## OOP Design
 
-The application separates responsibilities into different components:
+✅The application separates responsibilities into different components:
 
 ### `Task`
 
-Represents a single task and its data.
+✅Represents a single task and its data.
 
 ### `TaskManager`
 
 Handles task operations such as:
 
-* Creating tasks
-* Updating tasks
-* Deleting tasks
-* Completing tasks
-* Searching and filtering
+* ✅Creating tasks
+* ✅Updating tasks
+* ✅Deleting tasks
+* ✅Completing tasks
+* ✅Searching and filtering
 
 ### `Storage`
 
 Handles persistence:
 
-* Loading tasks from JSON
-* Saving tasks to JSON
+* ✅Loading tasks from JSON
+* ✅Saving tasks to JSON
 
 ### `Validators`
 
-Handles user input and data validation.
+✅Handles user input and data validation.
 
 ## Task Data
 
@@ -107,13 +107,13 @@ Status: Pending
 
 The application validates:
 
-* Empty task titles
-* Invalid task IDs
-* Non-existent task IDs
-* Invalid menu choices
-* Invalid priorities
-* Invalid dates
-* Invalid or corrupted stored data
+* ✅Empty task titles
+* ✅Invalid task IDs
+* ✅Non-existent task IDs
+* ✅Invalid menu choices
+* ✅Invalid priorities
+* ❌Invalid dates
+* ✅Invalid or corrupted stored data
 
 The goal is to keep validation consistent rather than repeating the same checks throughout the application.
 
