@@ -73,13 +73,20 @@ class Manager:
                 return
         print("Task not found.")
 
-    # Sammurize by priority, dou dates and status
-    def summarize_tasks(self):
+    # Filter tasks by status
+
+    def filter_status(self):
+        print("Completed tasks")
         for task in self.tasks:
-            if task.priority == "high" and task.status == "pending":
-                print("== High priority tasks and still uncompleted ==")
-                self.view_task()
-        print("There are not high priority tasks these uncompleted")
+            if task.status == "completed":
+                print(f" Id: {task.id} Title: {task.title} description: {task.description} priority: {task.priority} status: {task.status}")
+
+        print("\nUncompleted tasks")
+        for task in self.tasks:
+            if task.status == "pending":
+                print(f" Id: {task.id} Title: {task.title} description: {task.description} priority: {task.priority} status: {task.status}")
+                
+                
                 
 
                 

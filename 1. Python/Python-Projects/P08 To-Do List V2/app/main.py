@@ -18,7 +18,8 @@ def menu():
     print("3. Update task")
     print("4. Delete task")
     print("5. Mark task as a completed")
-    print("5. Exit\n")
+    print("6. Filter tasks by status")
+    print("7. Exit\n")
 
 def add_task():
     while True:
@@ -103,7 +104,7 @@ def main():
             manager.mark_task(task_id)
 
         elif choice == "6":
-            manager.summarize_tasks()
+            manager.filter_status()
             
         elif choice == '7':
             print('Exiting...')
