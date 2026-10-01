@@ -19,7 +19,8 @@ def menu():
     print("4. Delete task")
     print("5. Mark task as a completed")
     print("6. Filter tasks by status")
-    print("7. Exit\n")
+    print("7. Filter tasks by priority")
+    print("8. Exit\n")
 
 def add_task():
     while True:
@@ -105,8 +106,9 @@ def main():
 
         elif choice == "6":
             manager.filter_status()
-            
-        elif choice == '7':
+        elif choice == "7":
+            manager.filter_priority()
+        elif choice == '8':
             print('Exiting...')
             break
         else:

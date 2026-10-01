@@ -76,17 +76,34 @@ class Manager:
     # Filter tasks by status
 
     def filter_status(self):
-        print("Completed tasks")
+        print("\n== Completed tasks ==")
         for task in self.tasks:
             if task.status == "completed":
                 print(f" Id: {task.id} Title: {task.title} description: {task.description} priority: {task.priority} status: {task.status}")
 
-        print("\nUncompleted tasks")
+        print("\n== Uncompleted tasks ==")
         for task in self.tasks:
             if task.status == "pending":
                 print(f" Id: {task.id} Title: {task.title} description: {task.description} priority: {task.priority} status: {task.status}")
-                
-                
+
+    #Filter tasks by priority
+    def filter_priority(self):
+        print("\n== High priority tasks ==")
+        for task in self.tasks:
+            if task.priority == "high":
+                print(f" Id: {task.id} Title: {task.title} description: {task.description} priority: {task.priority} status: {task.status}")
+
+        print("\n== medium priority tasks ==")
+        for task in self.tasks:
+            if task.priority == "medium":
+                print(f" Id: {task.id} Title: {task.title} description: {task.description} priority: {task.priority} status: {task.status}")
+
+        print("\n== low priority tasks ==")
+        for task in self.tasks:
+            if task.priority == "low":
+                print(f" Id: {task.id} Title: {task.title} description: {task.description} priority: {task.priority} status: {task.status}")
+
+
                 
 
                 
