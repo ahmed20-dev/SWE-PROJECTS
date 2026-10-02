@@ -104,11 +104,16 @@ class Manager:
                 print(f" Id: {task.id} Title: {task.title} description: {task.description} priority: {task.priority} status: {task.status}")
 
 
-                
-
-                
-
-
+    #Search tasks
+    def Search_task(self, task_id):
+        try:
+            task_id = int(task_id)
+        except ValueError:
+                print("ID must be an exist ID.")
+                return
         
-
-
+        for task in self.tasks:
+            if task.id == task_id:
+                print(f" Id: {task.id} Title: {task.title} description: {task.description} priority: {task.priority} status: {task.status}")
+                return
+        print("Task not found.")
